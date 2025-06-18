@@ -18,7 +18,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 22 100% 52%;
+    --primary: 16 100% 52%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -27,7 +27,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 22 100% 52%;
+    --accent: 16 100% 52%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -35,7 +35,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 22 100% 52%;
+    --ring: 16 100% 52%;
 
     --radius: 0.5rem;
 
@@ -59,7 +59,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 22 100% 52%;
+    --primary: 16 100% 52%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -94,11 +94,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-['Inter',sans-serif];
+    @apply bg-background text-foreground font-['Inter',sans-serif] text-base leading-relaxed;
+    font-size: 16px;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-['Poppins',sans-serif];
+    @apply font-['Poppins',sans-serif] font-bold;
   }
 }
 
@@ -112,12 +113,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #ff6b35, #f7931e);
+  background: linear-gradient(135deg, #FF6B00, #FF5403);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #e55a2b, #e0841a);
+  background: linear-gradient(135deg, #e55a00, #e04603);
 }
 
 /* Glass morphism effect */
@@ -129,8 +130,47 @@
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd700);
+  background: linear-gradient(135deg, #FF6B00, #FF5403, #FF4500);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Count up animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.count-up {
+  animation: countUp 0.8s ease-out forwards;
+}
+
+/* Bounce in animation */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out forwards;
 }

@@ -24,7 +24,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-sunset rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-vibrant rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">B</span>
             </div>
             <span className="text-2xl font-bold gradient-text">Boddapati</span>
@@ -36,16 +36,16 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors duration-200 hover:text-orange-500 ${
+                className={`text-base font-bold transition-colors duration-200 hover:text-orange-600 ${
                   isActive(item.path)
-                    ? 'text-orange-500 border-b-2 border-orange-500 pb-1'
-                    : 'text-gray-700'
+                    ? 'text-orange-600 border-b-2 border-orange-600 pb-1'
+                    : 'text-gray-800'
                 }`}
               >
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-sunset hover:opacity-90 text-white shadow-lg">
+            <Button className="bg-gradient-vibrant hover:opacity-90 text-white shadow-lg font-semibold">
               Get Started
             </Button>
           </div>
@@ -70,8 +70,8 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block px-4 py-2 text-sm font-medium transition-colors duration-200 hover:text-orange-500 hover:bg-orange-50 ${
-                  isActive(item.path) ? 'text-orange-500 bg-orange-50' : 'text-gray-700'
+                className={`block px-4 py-2 text-base font-bold transition-colors duration-200 hover:text-orange-600 hover:bg-orange-50 ${
+                  isActive(item.path) ? 'text-orange-600 bg-orange-50' : 'text-gray-800'
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -79,7 +79,7 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="px-4 py-2">
-              <Button className="w-full bg-gradient-sunset hover:opacity-90 text-white">
+              <Button className="w-full bg-gradient-vibrant hover:opacity-90 text-white font-semibold">
                 Get Started
               </Button>
             </div>
