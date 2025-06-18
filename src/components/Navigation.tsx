@@ -1,0 +1,93 @@
+
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Services', path: '/services' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Contact', path: '/contact' },
+  ];
+
+  const isActive = (path: string) => location.pathname === path;
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-gradient-sunset rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">B</span>
+            </div>
+            <span className="text-2xl font-bold gradient-text">Boddapati</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`text-sm font-medium transition-colors duration-200 hover:text-orange-500 ${
+                  isActive(item.path)
+                    ? 'text-orange-500 border-b-2 border-orange-500 pb-1'
+                    : 'text-gray-700'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <Button className="bg-gradient-sunset hover:opacity-90 text-white shadow-lg">
+              Get Started
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-700"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden bg-white border-t border-orange-100 py-4 animate-fade-in">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`block px-4 py-2 text-sm font-medium transition-colors duration-200 hover:text-orange-500 hover:bg-orange-50 ${
+                  isActive(item.path) ? 'text-orange-500 bg-orange-50' : 'text-gray-700'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <div className="px-4 py-2">
+              <Button className="w-full bg-gradient-sunset hover:opacity-90 text-white">
+                Get Started
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+};
+
+export default Navigation;
