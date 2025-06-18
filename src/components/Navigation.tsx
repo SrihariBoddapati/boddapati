@@ -18,13 +18,31 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const scrollToGetStarted = () => {
+    if (location.pathname === '/' || location.pathname === '/contact') {
+      const element = document.getElementById('get-started-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else if (location.pathname === '/') {
+        // If on home page but section not found, scroll to CTA section
+        const ctaElement = document.querySelector('.bg-gradient-vibrant');
+        if (ctaElement) {
+          ctaElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      // Navigate to contact page if not on home page
+      window.location.href = '/contact';
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-vibrant rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-vibrant rounded-lg flex items-center justify-center shadow-md">
               <span className="text-white font-bold text-xl">B</span>
             </div>
             <span className="text-2xl font-bold gradient-text">Boddapati</span>
@@ -45,7 +63,10 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-gradient-vibrant hover:opacity-90 text-white shadow-lg font-semibold">
+            <Button 
+              onClick={scrollToGetStarted}
+              className="bg-gradient-vibrant hover:opacity-90 text-white shadow-lg font-bold hover:shadow-xl transition-all duration-300"
+            >
               Get Started
             </Button>
           </div>
@@ -79,7 +100,13 @@ const Navigation = () => {
               </Link>
             ))}
             <div className="px-4 py-2">
-              <Button className="w-full bg-gradient-vibrant hover:opacity-90 text-white font-semibold">
+              <Button 
+                onClick={() => {
+                  setIsOpen(false);
+                  scrollToGetStarted();
+                }}
+                className="w-full bg-gradient-vibrant hover:opacity-90 text-white font-bold"
+              >
                 Get Started
               </Button>
             </div>
