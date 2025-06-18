@@ -3,6 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import ServiceCard from '@/components/ServiceCard';
+import StatsSection from '@/components/StatsSection';
 import { Globe, Smartphone, Database, Settings, Code, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
@@ -52,14 +53,17 @@ const Index = () => {
       <Navigation />
       <Hero />
       
+      {/* Stats Section */}
+      <StatsSection />
+      
       {/* Services Section - Enhanced Premium Design */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Our Services</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-bold">
               We provide comprehensive software development services designed to help your business 
               thrive and succeed in today's competitive digital landscape.
             </p>
@@ -79,7 +83,7 @@ const Index = () => {
           
           <div className="text-center">
             <Link to="/services">
-              <Button size="lg" className="bg-gradient-vibrant hover:opacity-90 text-white shadow-xl px-10 py-4 text-lg font-semibold">
+              <Button size="lg" className="bg-gradient-vibrant hover:opacity-90 text-white shadow-xl px-10 py-4 text-lg font-bold">
                 View All Services
               </Button>
             </Link>
@@ -88,23 +92,23 @@ const Index = () => {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 bg-gradient-vibrant">
+      <section className="py-16 bg-gradient-vibrant">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-orange-100 mb-10 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-orange-100 mb-10 max-w-3xl mx-auto leading-relaxed font-bold">
             Let's discuss your project and discover how we can help you achieve your goals 
             with innovative, cutting-edge technology solutions that drive results.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="bg-white text-orange-600 hover:bg-orange-50 border-white font-semibold px-10 py-4 text-lg">
+              <Button size="lg" variant="outline" className="bg-white text-orange-600 hover:bg-orange-50 border-white font-bold px-10 py-4 text-lg">
                 Get Started Today
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 font-semibold px-10 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 font-bold px-10 py-4 text-lg">
                 View Our Work
               </Button>
             </Link>

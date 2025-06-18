@@ -11,12 +11,12 @@ const Contact = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="gradient-text">Let's Connect</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed font-bold">
               Ready to transform your ideas into digital reality? Get in touch with us today 
               and let's discuss your next project.
             </p>
@@ -24,9 +24,9 @@ const Contact = () => {
         </section>
 
         {/* Contact Cards */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Email Card */}
               <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-200 bg-white/80 backdrop-blur-sm">
                 <CardHeader className="text-center pb-4">
@@ -36,7 +36,7 @@ const Contact = () => {
                   <CardTitle className="text-2xl gradient-text">Email Us</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-gray-600 mb-4 text-base">
+                  <p className="text-gray-600 mb-4 text-base font-bold">
                     Drop us a line and we'll get back to you promptly
                   </p>
                   <a 
@@ -57,7 +57,7 @@ const Contact = () => {
                   <CardTitle className="text-2xl gradient-text">Call Us</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <p className="text-gray-600 mb-4 text-base">
+                  <p className="text-gray-600 mb-4 text-base font-bold">
                     Speak directly with our team of experts
                   </p>
                   <a 
@@ -71,7 +71,7 @@ const Contact = () => {
             </div>
 
             {/* Additional Info Cards */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* Response Time */}
               <Card className="border-orange-100 bg-white/60 backdrop-blur-sm">
                 <CardHeader>
@@ -81,7 +81,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 text-base font-medium">
+                  <p className="text-gray-700 text-base font-bold">
                     We typically respond within 24 hours during business days.
                   </p>
                 </CardContent>
@@ -96,7 +96,7 @@ const Contact = () => {
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 text-base font-medium">
+                  <p className="text-gray-700 text-base font-bold">
                     Tell us about your project requirements and business goals.
                   </p>
                 </CardContent>
@@ -104,10 +104,10 @@ const Contact = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="text-center mt-16">
+            <div className="text-center">
               <div className="bg-gradient-vibrant p-8 rounded-2xl text-white">
                 <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                <p className="text-lg mb-6 text-orange-100">
+                <p className="text-lg mb-6 text-orange-100 font-bold">
                   Contact us today and let's bring your vision to life with innovative technology solutions.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
