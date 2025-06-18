@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
@@ -15,10 +15,14 @@ const Footer = () => {
               </div>
               <span className="text-2xl font-bold">Boddapati</span>
             </div>
+            <p className="text-gray-400 font-bold text-sm">
+              Transforming ideas into digital reality with innovative software solutions.
+            </p>
           </div>
 
           {/* Contact Info - Center */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+          <div className="flex flex-col space-y-4">
+            <h3 className="text-lg font-bold mb-2">Contact Info</h3>
             <a 
               href="mailto:info@boddapati.com" 
               className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors group"
@@ -47,6 +51,11 @@ const Footer = () => {
               <li>
                 <Link to="/about" className="text-gray-300 hover:text-orange-400 transition-colors font-bold">
                   About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-gray-300 hover:text-orange-400 transition-colors font-bold">
+                  Services
                 </Link>
               </li>
               <li>

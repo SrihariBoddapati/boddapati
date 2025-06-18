@@ -56,9 +56,9 @@ const Portfolio = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="gradient-text">Our Portfolio</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-bold">
@@ -73,9 +73,9 @@ const Portfolio = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-orange-100 hover:border-orange-300 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-100 hover:border-orange-300 animate-fade-in shadow-lg" style={{ animationDelay: `${index * 0.1}s` }}>
                   <CardHeader>
-                    <div className="aspect-video bg-gradient-vibrant rounded-lg mb-4 flex items-center justify-center">
+                    <div className="aspect-video bg-gradient-vibrant rounded-lg mb-4 flex items-center justify-center shadow-md">
                       <img 
                         src={project.image} 
                         alt={project.title}
@@ -84,7 +84,7 @@ const Portfolio = () => {
                     </div>
                     <div className="flex justify-between items-start mb-2">
                       <CardTitle className="text-xl font-bold text-gray-800">{project.title}</CardTitle>
-                      <Badge variant="outline" className="text-xs font-bold">{project.category}</Badge>
+                      <Badge variant="outline" className="text-xs font-bold shadow-sm">{project.category}</Badge>
                     </div>
                     <CardDescription className="text-gray-600 font-bold">{project.description}</CardDescription>
                   </CardHeader>
@@ -92,7 +92,7 @@ const Portfolio = () => {
                     <div className="mb-4">
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
-                          <Badge key={techIndex} variant="secondary" className="text-xs font-bold">
+                          <Badge key={techIndex} variant="secondary" className="text-xs font-bold shadow-sm">
                             {tech}
                           </Badge>
                         ))}

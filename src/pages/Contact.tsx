@@ -11,9 +11,9 @@ const Contact = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="gradient-text">Let's Connect</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed font-bold">
@@ -26,11 +26,11 @@ const Contact = () => {
         {/* Contact Cards */}
         <section className="py-8">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Email Card */}
-              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-200 bg-white/80 backdrop-blur-sm">
+              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-200 bg-white/80 backdrop-blur-sm shadow-lg">
                 <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-vibrant rounded-2xl w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="mx-auto mb-4 p-4 bg-gradient-vibrant rounded-2xl w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Mail className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-2xl gradient-text">Email Us</CardTitle>
@@ -49,9 +49,9 @@ const Contact = () => {
               </Card>
 
               {/* Phone Card */}
-              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-200 bg-white/80 backdrop-blur-sm">
+              <Card className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-orange-200 bg-white/80 backdrop-blur-sm shadow-lg">
                 <CardHeader className="text-center pb-4">
-                  <div className="mx-auto mb-4 p-4 bg-gradient-vibrant rounded-2xl w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="mx-auto mb-4 p-4 bg-gradient-vibrant rounded-2xl w-16 h-16 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <Phone className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-2xl gradient-text">Call Us</CardTitle>
@@ -71,9 +71,9 @@ const Contact = () => {
             </div>
 
             {/* Additional Info Cards */}
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
               {/* Response Time */}
-              <Card className="border-orange-100 bg-white/60 backdrop-blur-sm">
+              <Card className="border-orange-100 bg-white/60 backdrop-blur-sm shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-xl">
                     <Clock className="w-6 h-6 text-orange-600" />
@@ -88,7 +88,7 @@ const Contact = () => {
               </Card>
 
               {/* Business Hours */}
-              <Card className="border-orange-100 bg-white/60 backdrop-blur-sm">
+              <Card className="border-orange-100 bg-white/60 backdrop-blur-sm shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-3 text-xl">
                     <MessageCircle className="w-6 h-6 text-orange-600" />
@@ -105,7 +105,7 @@ const Contact = () => {
 
             {/* Call to Action */}
             <div className="text-center">
-              <div className="bg-gradient-vibrant p-8 rounded-2xl text-white">
+              <div className="bg-gradient-vibrant p-8 rounded-2xl text-white shadow-xl">
                 <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
                 <p className="text-lg mb-6 text-orange-100 font-bold">
                   Contact us today and let's bring your vision to life with innovative technology solutions.
@@ -113,13 +113,13 @@ const Contact = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
                     href="mailto:info@boddapati.com" 
-                    className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-colors"
+                    className="bg-white text-orange-600 px-8 py-3 rounded-lg font-bold hover:bg-orange-50 transition-colors shadow-md"
                   >
                     Send Email
                   </a>
                   <a 
                     href="tel:+1-555-BODDAPATI" 
-                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-orange-600 transition-colors"
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-orange-600 transition-colors shadow-md"
                   >
                     Call Now
                   </a>

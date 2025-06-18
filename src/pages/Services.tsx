@@ -80,12 +80,12 @@ const Services = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="gradient-text">Our Services</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-bold">
               Comprehensive software development services to help your business grow and succeed 
               in the digital landscape.
             </p>
@@ -93,7 +93,7 @@ const Services = () => {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16">
+        <section className="py-8">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
