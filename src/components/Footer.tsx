@@ -23,20 +23,28 @@ const Footer = () => {
           {/* Contact Info - Center */}
           <div className="flex flex-col space-y-4">
             <h3 className="text-lg font-bold mb-2">Contact Info</h3>
-            <a 
-              href="mailto:info@boddapati.com" 
-              className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors group"
-            >
-              <Mail size={18} className="group-hover:scale-110 transition-transform" />
-              <span className="font-bold">info@boddapati.com</span>
-            </a>
-            <a 
-              href="tel:+1-555-BODDAPATI" 
-              className="flex items-center space-x-2 text-gray-300 hover:text-orange-400 transition-colors group"
-            >
-              <Phone size={18} className="group-hover:scale-110 transition-transform" />
-              <span className="font-bold">+1-555-BODDAPATI</span>
-            </a>
+            <div className="space-y-3">
+              <a 
+                href="mailto:support@boddapati.com" 
+                className="flex items-start space-x-2 text-gray-300 hover:text-orange-400 transition-colors group"
+              >
+                <Mail size={18} className="group-hover:scale-110 transition-transform mt-0.5" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-sm">Email</span>
+                  <span className="text-sm">support@boddapati.com</span>
+                </div>
+              </a>
+              <a 
+                href="tel:+919966773214" 
+                className="flex items-start space-x-2 text-gray-300 hover:text-orange-400 transition-colors group"
+              >
+                <Phone size={18} className="group-hover:scale-110 transition-transform mt-0.5" />
+                <div className="flex flex-col">
+                  <span className="font-bold text-sm">Phone</span>
+                  <span className="text-sm">+91 9966773214</span>
+                </div>
+              </a>
+            </div>
           </div>
 
           {/* Quick Links */}

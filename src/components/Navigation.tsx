@@ -32,7 +32,7 @@ const Navigation = () => {
       }
     } else {
       // Navigate to contact page if not on home page
-      window.location.href = '/contact';
+      window.location.href = '/contact#get-started-section';
     }
   };
 

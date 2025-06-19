@@ -40,10 +40,10 @@ const Contact = () => {
                     Drop us a line and we'll get back to you promptly
                   </p>
                   <a 
-                    href="mailto:info@boddapati.com"
+                    href="mailto:support@boddapati.com"
                     className="text-orange-600 hover:text-orange-700 font-bold text-lg transition-colors hover:underline"
                   >
-                    info@boddapati.com
+                    support@boddapati.com
                   </a>
                 </CardContent>
               </Card>
@@ -61,10 +61,10 @@ const Contact = () => {
                     Speak directly with our team of experts
                   </p>
                   <a 
-                    href="tel:+1-555-BODDAPATI"
+                    href="tel:+919966773214"
                     className="text-orange-600 hover:text-orange-700 font-bold text-lg transition-colors hover:underline"
                   >
-                    +1-555-BODDAPATI
+                    +91 9966773214
                   </a>
                 </CardContent>
               </Card>
@@ -112,13 +112,13 @@ const Contact = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
-                    href="mailto:info@boddapati.com" 
+                    href="mailto:support@boddapati.com" 
                     className="bg-white text-orange-600 px-6 py-2 rounded-lg font-bold hover:bg-orange-50 transition-colors shadow-md hover:shadow-lg"
                   >
                     Send Email
                   </a>
                   <a 
-                    href="tel:+1-555-BODDAPATI" 
+                    href="tel:+919966773214" 
                     className="border-2 border-white text-white px-6 py-2 rounded-lg font-bold hover:bg-white hover:text-orange-600 transition-colors shadow-md hover:shadow-lg"
                   >
                     Call Now

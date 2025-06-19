@@ -33,7 +33,11 @@ const Hero = () => {
               </Button>
             </Link>
             <Link to="/portfolio">
-              <Button size="lg" variant="outline" className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 text-lg px-8 py-4 font-bold">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 hover:text-orange-700 text-lg px-8 py-4 font-bold transition-all duration-300"
+              >
                 View Our Work
               </Button>
             </Link>
